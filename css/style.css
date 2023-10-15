@@ -1,0 +1,215 @@
+/* General CSS */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  /* Colors */
+  --headerBgColor: blue;
+  --menuBgColor: green;
+  --newReleaseBgColor: yellow;
+  --newReleaseBtnColor: brown;
+  --quoteBgColor: blue;
+  --headlineBgColor: blue;
+  --headlineTxtColor: yellow;
+  --footerBgColor: purple;
+  --white: white;
+  --txtBlue: blue;
+  --txtRed: red;
+
+  /* Fonts */
+  --headlineTxtFont: "Montserrat", sans-serif;
+  --menuFont: "Montserrat", sans-serif;
+  --pTxtFont: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  font-family: var(--pTxtFont);
+}
+
+img {
+  width: 100%;
+}
+
+.headline {
+  background-color: var(--headlineBgColor);
+  color: var(--headlineTxtColor);
+  font-family: var(--headlineTxtFont);
+  padding: 2%;
+}
+
+/* Header mobile */
+.header-top {
+  background-color: var(--headerBgColor);
+  color: var(--headlineTxtColor);
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  font-family: var(--headlineTxtFont);
+}
+
+.header-top img {
+  display: none;
+}
+
+select {
+  width: 10%;
+}
+/* Menu mobile */
+
+nav {
+  background-color: var(--menuBgColor);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  gap: 1rem;
+}
+
+li {
+  border-bottom: 0.1rem solid var(--headlineTxtColor);
+  width: 100%;
+  text-align: center;
+  padding: 1.5%;
+}
+
+li a {
+  text-decoration: none;
+  font-family: var(--menuFont);
+  color: var(--headlineTxtColor);
+}
+
+/* New Release mobile*/
+#new-release {
+  background-color: var(--newReleaseBgColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--headlineTxtFont);
+  text-align: center;
+}
+
+#new-release-btn {
+  background-color: var(--newReleaseBtnColor);
+  border-radius: 0.7rem;
+  padding: 2%;
+  width: 50%;
+  text-align: center;
+}
+
+#new-release img {
+  width: 30%;
+  margin: 2%;
+  padding: 2%;
+  background-color: var(--white);
+  border-radius: 1rem;
+}
+
+.italic {
+  font-style: italic;
+}
+
+#new-release-p {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 5%;
+}
+
+#new-release-p blockquote {
+  background-color: var(--quoteBgColor);
+  color: var(--white);
+  padding: 5%;
+  border-radius: 1rem;
+  margin: 3%;
+  font-style: italic;
+}
+
+#new-release-p cite {
+  font-style: normal;
+  font-weight: bold;
+}
+
+#new-release-p div {
+  display: none;
+}
+
+/* On Tour mobile*/
+
+#on-tour article {
+  margin: 3%;
+}
+
+.tour-box {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 0.1rem solid var(--headlineTxtColor);
+  padding: 5%;
+}
+
+.tour-box img {
+  width: 5%;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.blue-txt {
+  color: var(--txtBlue);
+  font-weight: bold;
+}
+
+.red-txt {
+  color: var(--txtRed);
+  font-weight: bold;
+}
+
+/* Books Mmobile*/
+#books article {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+#books img {
+  width: 50%;
+  align-self: center;
+  padding-bottom: 5%;
+}
+
+.bold {
+  font-weight: bold;
+  padding-bottom: 5%;
+}
+
+/* Contact mobile */
+
+#contact img {
+  border-radius: 50%;
+  width: 30%;
+  align-self: center;
+}
+
+#contact article {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.contact-form {
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
