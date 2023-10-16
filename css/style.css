@@ -9,17 +9,19 @@
 
 :root {
   /* Colors */
-  --headerBgColor: blue;
-  --menuBgColor: green;
-  --newReleaseBgColor: yellow;
-  --newReleaseBtnColor: brown;
-  --quoteBgColor: blue;
-  --headlineBgColor: blue;
-  --headlineTxtColor: yellow;
-  --footerBgColor: purple;
+  --bgColor: #1c2d3b;
+  --headerBgColor: #0b0f1b;
+  --menuBgColor: #1c2d3b;
+  --newReleaseBgColor: #e54c0d;
+  --newReleaseBtnColor: white;
+  --quoteBgColor: #e54c0d;
+  --headlineBgColor: #0b0f1b;
+  --headlineTxtColor: white;
+  --footerBgColor: #0b0f1b;
   --white: white;
-  --txtBlue: blue;
-  --txtRed: red;
+  --txtBlue: #e54c0d;
+  --txtRed: white;
+  --black: black;
 
   /* Fonts */
   --headlineTxtFont: "Montserrat", sans-serif;
@@ -29,6 +31,7 @@
 
 body {
   font-family: var(--pTxtFont);
+  background-color: var(--bgColor);
 }
 
 img {
@@ -94,6 +97,7 @@ li a {
   align-items: center;
   font-family: var(--headlineTxtFont);
   text-align: center;
+  padding-top: 10%;
 }
 
 #new-release-btn {
@@ -101,6 +105,7 @@ li a {
   border-radius: 0.7rem;
   padding: 2%;
   width: 50%;
+  margin: 5%;
   text-align: center;
 }
 
@@ -114,6 +119,7 @@ li a {
 
 .italic {
   font-style: italic;
+  padding: 7%;
 }
 
 #new-release-p {
@@ -121,11 +127,13 @@ li a {
   flex-direction: column;
   gap: 15px;
   padding: 5%;
+  color: var(--headlineTxtColor);
+  font-size: 1.1rem;
 }
 
 #new-release-p blockquote {
   background-color: var(--quoteBgColor);
-  color: var(--white);
+  color: var(--black);
   padding: 5%;
   border-radius: 1rem;
   margin: 3%;
@@ -137,7 +145,7 @@ li a {
   font-weight: bold;
 }
 
-#new-release-p div {
+#new-release-p aside {
   display: none;
 }
 
@@ -152,6 +160,7 @@ li a {
   flex-direction: column;
   border-bottom: 0.1rem solid var(--headlineTxtColor);
   padding: 5%;
+  color: var(--white);
 }
 
 .tour-box img {
@@ -178,6 +187,7 @@ li a {
   padding: 5%;
   display: flex;
   flex-direction: column;
+  color: var(--white);
 }
 
 #books img {
@@ -203,13 +213,189 @@ li a {
   display: flex;
   flex-direction: column;
   padding: 5%;
+  color: var(--white);
 }
 
 .contact-form {
+  margin-top: 10%;
 }
 
 fieldset {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  border-radius: 3%;
 }
+
+/* Footer mobile */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--footerBgColor);
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  gap: 0.3rem;
+  margin: 5% 0 5% 0;
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.socials img {
+  border-radius: 50%;
+}
+
+footer p {
+  color: var(--headlineTxtColor);
+}
+
+#credits {
+  margin: 5% 0 5% 0;
+}
+
+#kea-publishing {
+  width: 30%;
+}
+
+/* General desktop */
+@media (min-width: 1024px) {
+  body {
+    margin-left: calc((100vw - 745px) / 2 - 15%);
+    margin-right: calc((100vw - 745px) / 2 - 15%);
+  }
+}
+
+/* header desktop */
+
+@media (min-width: 1024px) {
+  .header-top {
+    background-color: var(--headerBgColor);
+    color: var(--headlineTxtColor);
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    font-family: var(--headlineTxtFont);
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 4rem;
+  }
+
+  header h2 {
+    font-size: 2rem;
+  }
+
+  .header-top img {
+    display: block;
+    border-radius: 50%;
+  }
+
+  select {
+    width: 3%;
+    height: 10%;
+  }
+}
+
+/* menu desktop */
+@media (min-width: 1024px) {
+  nav {
+    background-color: var(--menuBgColor);
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+
+  li {
+    border-bottom: none;
+  }
+}
+
+/* new release desktop */
+@media (min-width: 1024px) {
+  #new-release {
+    background-color: var(--newReleaseBgColor);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+    font-family: var(--headlineTxtFont);
+    text-align: center;
+    padding: 2% 2% 2% 2%;
+  }
+
+  #new-release-btn {
+    background-color: var(--newReleaseBtnColor);
+    border-radius: 0.7rem;
+    padding: 1%;
+    width: auto;
+    margin: 5%;
+    text-align: center;
+  }
+
+  #new-release img {
+    margin: 0 0% 20% 0%;
+    padding: 2%;
+    background-color: var(--white);
+    border-radius: 1rem;
+    grid-column: end;
+    width: 100%;
+  }
+
+  .italic {
+    font-style: italic;
+    padding: 4% 0 0 0;
+  }
+
+  #new-release-p {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    grid-column: 1/5;
+    gap: 15px;
+    padding: 5%;
+    color: var(--headlineTxtColor);
+    font-size: 1.1rem;
+  }
+
+  #new-release-p blockquote {
+    background-color: var(--quoteBgColor);
+    color: var(--black);
+    padding: 5%;
+    border-radius: 1rem;
+    margin: 3%;
+    font-style: italic;
+  }
+
+  #new-release-p cite {
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  #new-release-p aside {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    grid-column: 5/6;
+  }
+
+  #published-books {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* on tour desktop */
