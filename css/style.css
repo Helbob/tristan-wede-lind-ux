@@ -188,6 +188,7 @@ li a {
   display: flex;
   flex-direction: column;
   color: var(--white);
+  border-bottom: 0.1rem solid var(--headlineTxtColor);
 }
 
 #books img {
@@ -203,7 +204,7 @@ li a {
 
 /* Contact mobile */
 
-#contact img {
+.profile {
   border-radius: 50%;
   width: 30%;
   align-self: center;
@@ -218,6 +219,10 @@ li a {
 
 .contact-form {
   margin-top: 10%;
+}
+
+#conference {
+  display: none;
 }
 
 fieldset {
@@ -399,3 +404,108 @@ footer p {
 }
 
 /* on tour desktop */
+@media (min-width: 1024px) {
+  #on-tour article {
+    margin: 3%;
+  }
+
+  .tour-box {
+    display: flex;
+    flex-direction: column;
+    border: 0.1rem solid var(--headlineTxtColor);
+    border-radius: 1rem;
+    padding: 2%;
+    color: var(--white);
+  }
+
+  .tour-box img {
+    width: auto;
+    padding: 0;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .blue-txt {
+    color: var(--txtBlue);
+    font-weight: bold;
+  }
+
+  .red-txt {
+    color: var(--txtRed);
+    font-weight: bold;
+  }
+
+  #boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* books desktop */
+@media (min-width: 1024px) {
+  #books-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #books article {
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    color: var(--white);
+    border: 0.1rem solid var(--headlineTxtColor);
+    margin: 2%;
+    border-radius: 1rem;
+  }
+
+  #books img {
+    width: auto;
+    align-self: center;
+    padding-bottom: 5%;
+  }
+
+  .bold {
+    font-weight: bold;
+    padding-bottom: 5%;
+  }
+
+  .left {
+    order: -1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Contact mobile */
+@media (min-width: 1024px) {
+  .profile {
+    border-radius: 50%;
+    width: auto;
+    align-self: center;
+  }
+
+  #contact article {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    color: var(--white);
+  }
+
+  .contact-form {
+    margin-top: 10%;
+  }
+
+  fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 3%;
+  }
+  #conference {
+    display: block;
+  }
+
+  #profiles {
+  }
+}
